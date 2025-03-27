@@ -368,6 +368,9 @@ if &background == 'dark'
       hi ALEInfoSign guifg=#073642 guibg=#2aa198 guisp=NONE gui=bold
       hi ALEWarningSign guifg=#073642 guibg=#b58900 guisp=NONE gui=bold
     endif
+    if s:italics == 0
+      hi Comment gui=NONE
+    endif
     if s:oldcursor == 1
       hi Cursor guifg=#002b36 guibg=#93a1a1 guisp=NONE gui=NONE
     endif
@@ -712,6 +715,9 @@ if &background == 'dark'
       hi ALEErrorSign guifg=#073642 ctermfg=236 guibg=#dc322f ctermbg=160 guisp=NONE cterm=bold
       hi ALEInfoSign guifg=#073642 ctermfg=236 guibg=#2aa198 ctermbg=37 guisp=NONE cterm=bold
       hi ALEWarningSign guifg=#073642 ctermfg=236 guibg=#b58900 ctermbg=136 guisp=NONE cterm=bold
+    endif
+    if s:italics == 0
+      hi Comment cterm=NONE
     endif
     if s:oldcursor == 1
       hi Cursor guifg=#002b36 ctermfg=235 guibg=#93a1a1 ctermbg=247 guisp=NONE cterm=NONE
@@ -1078,6 +1084,9 @@ if &background == 'dark'
       hi ALEInfoSign guifg=#073642 ctermfg=0 guibg=#2aa198 ctermbg=6 guisp=NONE cterm=bold
       hi ALEWarningSign guifg=#073642 ctermfg=0 guibg=#b58900 ctermbg=3 guisp=NONE cterm=bold
     endif
+    if s:italics == 0
+      hi Comment cterm=NONE
+    endif
     if s:oldcursor == 1
       hi Cursor guifg=#002b36 ctermfg=8 guibg=#93a1a1 ctermbg=14 guisp=NONE cterm=NONE
     endif
@@ -1222,6 +1231,9 @@ if &background == 'dark'
       hi DiffText term=reverse
     elseif s:diffmode == "low"
       hi DiffDelete term=bold
+    endif
+    if s:italics == 0
+      hi Comment term=NONE
     endif
     if s:oldcursor == 1
       hi Cursor term=NONE
@@ -1631,6 +1643,9 @@ if &background == 'light'
       hi ALEInfoSign guifg=#eee8d5 guibg=#2aa198 guisp=NONE gui=bold
       hi ALEWarningSign guifg=#eee8d5 guibg=#b58900 guisp=NONE gui=bold
     endif
+    if s:italics == 0
+      hi Comment gui=NONE
+    endif
     if s:stl == "flat"
       hi StatusLine guifg=#eee8d5 guibg=#002b36 guisp=NONE gui=reverse
       hi StatusLineNC guifg=#eee8d5 guibg=#073642 guisp=NONE gui=reverse
@@ -1983,6 +1998,9 @@ if &background == 'light'
       hi ALEErrorSign guifg=#eee8d5 ctermfg=254 guibg=#dc322f ctermbg=160 guisp=NONE cterm=bold
       hi ALEInfoSign guifg=#eee8d5 ctermfg=254 guibg=#2aa198 ctermbg=37 guisp=NONE cterm=bold
       hi ALEWarningSign guifg=#eee8d5 ctermfg=254 guibg=#b58900 ctermbg=136 guisp=NONE cterm=bold
+    endif
+    if s:italics == 0
+      hi Comment cterm=NONE
     endif
     if s:stl == "flat"
       hi StatusLine guifg=#eee8d5 ctermfg=254 guibg=#002b36 ctermbg=235 guisp=NONE cterm=reverse
@@ -2357,6 +2375,9 @@ if &background == 'light'
       hi ALEInfoSign guifg=#eee8d5 ctermfg=7 guibg=#2aa198 ctermbg=6 guisp=NONE cterm=bold
       hi ALEWarningSign guifg=#eee8d5 ctermfg=7 guibg=#b58900 ctermbg=3 guisp=NONE cterm=bold
     endif
+    if s:italics == 0
+      hi Comment cterm=NONE
+    endif
     if s:stl == "flat"
       hi StatusLine guifg=#eee8d5 ctermfg=7 guibg=#002b36 ctermbg=8 guisp=NONE cterm=reverse
       hi StatusLineNC guifg=#eee8d5 ctermfg=7 guibg=#073642 ctermbg=0 guisp=NONE cterm=reverse
@@ -2509,6 +2530,9 @@ if &background == 'light'
       hi DiffText term=reverse
     elseif s:diffmode == "low"
       hi DiffDelete term=bold
+    endif
+    if s:italics == 0
+      hi Comment term=NONE
     endif
     if s:stl == "flat"
       hi StatusLine term=reverse
